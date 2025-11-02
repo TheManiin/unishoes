@@ -10,9 +10,9 @@ import java.util.List;
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
-    private final PasswordEncoder passwordEncoder; // <-- 🔥 adiciona este campo
+    private final PasswordEncoder passwordEncoder;
 
-    // Construtor principal com injeção das dependências
+    
     public UsuarioService(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
@@ -27,7 +27,7 @@ public class UsuarioService {
     }
 
     public void salvar(Usuario usuario) {
-        // Criptografa a senha antes de salvar
+        
         usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         usuarioRepository.save(usuario);
     }

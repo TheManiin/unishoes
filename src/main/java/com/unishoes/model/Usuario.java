@@ -25,7 +25,7 @@ public class Usuario {
 
     private boolean ativo = true;
     
-    private String role; // ROLE_USER ou ROLE_ADMIN
+    private String role;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

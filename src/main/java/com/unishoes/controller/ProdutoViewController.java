@@ -51,7 +51,7 @@ public class ProdutoViewController {
             @RequestParam(value = "file", required = false) MultipartFile file) {
 
         try {
-            // Caminho absoluto da pasta externa
+            
             String uploadDir = System.getProperty("user.dir") + "/uploads/";
             Path uploadPath = Paths.get(uploadDir);
 
@@ -59,7 +59,7 @@ public class ProdutoViewController {
                 Files.createDirectories(uploadPath);
             }
 
-            // Se o usuário enviou uma imagem
+            
             if (file != null && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
                 Path filePath = uploadPath.resolve(fileName);
@@ -92,7 +92,7 @@ public class ProdutoViewController {
                 .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado: " + id));
         model.addAttribute("produto", produto);
         model.addAttribute("categorias", categoriaService.listarTodas());
-        return "editar-produto"; // o HTML que você mostrou
+        return "editar-produto"; 
     }
 
     @PostMapping("/atualizar/{id}")
@@ -107,20 +107,20 @@ public class ProdutoViewController {
                 return "redirect:/app/produtos";
             }
 
-            // Atualiza dados do produto
+            
             existente.setNome(produto.getNome());
             existente.setDescricao(produto.getDescricao());
             existente.setPreco(produto.getPreco());
             existente.setCategoria(produto.getCategoria());
 
-            // Pasta de uploads fora do projeto
+            
             String uploadDir = System.getProperty("user.dir") + "/uploads/";
             Path uploadPath = Paths.get(uploadDir);
             if (!Files.exists(uploadPath)) {
                 Files.createDirectories(uploadPath);
             }
 
-            // Atualiza imagem se enviada
+            
             if (file != null && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
                 Path filePath = uploadPath.resolve(fileName);
@@ -145,7 +145,7 @@ public class ProdutoViewController {
     
     @InitBinder
     public void initBinder(WebDataBinder binder) {
-        // Conversão de Categoria (id -> objeto)
+        
         binder.registerCustomEditor(com.unishoes.model.Categoria.class, new PropertyEditorSupport() {
             @Override
             public void setAsText(String text) {
@@ -158,7 +158,7 @@ public class ProdutoViewController {
             }
         });
 
-        // Conversão de BigDecimal (preço formatado -> número)
+        
         binder.registerCustomEditor(java.math.BigDecimal.class, "preco", new PropertyEditorSupport() {
             @Override
             public void setAsText(String text) {
@@ -166,7 +166,7 @@ public class ProdutoViewController {
                     setValue(null);
                     return;
                 }
-                // Remove "R$", espaços e pontos dos milhares
+                
                 String normalized = text.replace("R$", "")
                                         .replace(" ", "")
                                         .replace(".", "")

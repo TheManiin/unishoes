@@ -22,7 +22,7 @@ public class AdminController {
         this.papelRepository = papelRepository;
     }
 
-    // Página principal do painel admin
+    
     @GetMapping
     public String painelAdmin(Model model) {
         List<Usuario> usuarios = usuarioRepository.findAll();
@@ -30,7 +30,7 @@ public class AdminController {
         return "admin";
     }
 
-    // Alternar o papel do usuário (ROLE_USER <-> ROLE_ADMIN)
+    
     @PostMapping("/alterarRole/{id}")
     public String alterarRole(@PathVariable Long id) {
         Usuario usuario = usuarioRepository.findById(id).orElse(null);
@@ -49,7 +49,7 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    // Ativar/desativar usuário
+    
     @PostMapping("/toggleAtivo/{id}")
     public String toggleAtivo(@PathVariable Long id) {
         Usuario usuario = usuarioRepository.findById(id).orElse(null);
@@ -60,7 +60,7 @@ public class AdminController {
         return "redirect:/admin";
     }
     
-    // Excluir usuário
+    
     @PostMapping("/excluir/{id}")
     public String deletarUsuario(@PathVariable Long id) {
         usuarioRepository.deleteById(id);

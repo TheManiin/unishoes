@@ -57,7 +57,7 @@ public class SecurityConfig {
                 .anyRequest().permitAll()
             )
             .formLogin(form -> form
-                .loginPage("/login") // <- espera um controller que retorne "login"
+                .loginPage("/login")
                 .defaultSuccessUrl("/app/produtos", true)
                 .permitAll()
             )

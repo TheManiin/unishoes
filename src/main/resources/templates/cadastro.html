@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Cadastro - UniShoes</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 
@@ -16,7 +17,7 @@
 
                     <form th:action="@{/cadastro}" method="post" th:object="${usuario}" autocomplete="new-password">
 
-                        <!-- Campos falsos (para o navegador pensar que já preencheu) -->
+                        
                         <input type="text" name="fakeusernameremembered" style="display:none">
                         <input type="password" name="fakepasswordremembered" style="display:none">
 
@@ -42,7 +43,7 @@
                                    <span style="font-size:12px">*A senha deve possuir no máximo 10 caracteres.</span>
                         </div>
 
-                        <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+                        <button type="submit" class="btn btn-success w-100" style="background: linear-gradient(90deg, #007bff, #00c4ff);">Cadastrar</button>
                     </form>
 
                     <div class="mt-3 text-center">

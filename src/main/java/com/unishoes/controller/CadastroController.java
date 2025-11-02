@@ -32,7 +32,7 @@ public class CadastroController {
     public String salvarCadastro(@ModelAttribute Usuario usuario) {
         usuario.setAtivo(true);
 
-        // Busca o papel padrão ou lança exceção se não existir
+        
         Papel papelUser = papelRepository.findByNome("ROLE_USER")
                 .orElseThrow(() -> new RuntimeException("Papel ROLE_USER não encontrado"));
 

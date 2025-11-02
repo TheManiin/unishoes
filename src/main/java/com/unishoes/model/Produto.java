@@ -18,7 +18,7 @@ public class Produto {
     private BigDecimal preco;
     private String descricao;
 
-    // RELACIONAMENTO MUITOS-para-UM (muitos produtos podem pertencer a uma categoria)
+    
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     @JsonBackReference
@@ -35,7 +35,7 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    // Getters e Setters
+    
     public Long getId() {
         return id;
     }

@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // Mapeia /uploads/** para a pasta local "uploads/"
+        
         registry.addResourceHandler("/uploads/**")
                 .addResourceLocations("file:uploads/");
     }

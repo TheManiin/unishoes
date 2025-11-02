@@ -19,6 +19,6 @@ public class CategoriaController {
     @GetMapping
     public String listarCategorias(Model model) {
         model.addAttribute("categorias", categoriaService.listarTodas());
-        return "categorias"; // ← renderiza o arquivo categorias.html
+        return "categorias"; 
     }
 }

@@ -9,11 +9,11 @@ public class UploadConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // Caminho absoluto da pasta de uploads
+        
         String path = System.getProperty("user.dir") + "/uploads/";
 
         registry.addResourceHandler("/uploads/**")
                 .addResourceLocations("file:" + path)
-                .setCachePeriod(0); // 🔥 desativa cache pra ver a imagem atualizada na hora
+                .setCachePeriod(0);
     }
 }

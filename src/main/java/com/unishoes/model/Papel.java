@@ -14,7 +14,7 @@ public class Papel {
     private Long id;
 
     @Column(unique = true, nullable = false)
-    private String nome; // ROLE_ADMIN, ROLE_USER
+    private String nome;
 	
 	public void setNome(String nome) {
 		this.nome = nome;

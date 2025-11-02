@@ -49,7 +49,7 @@ public class ProdutoController {
     public String salvarProduto(@ModelAttribute Produto produto,
                                 @RequestParam("file") MultipartFile file) {
         try {
-            // Se foi feito upload de arquivo
+            
             if (file != null && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
                 Path uploadPath = Paths.get("src/main/resources/static/uploads/");
@@ -61,7 +61,7 @@ public class ProdutoController {
 
                 produto.setImagemUrl("/uploads/" + fileName);
             } else {
-                // Mantém a imagem existente ao editar
+                
                 if (produto.getId() != null) {
                     Produto existente = produtoService.buscarPorId(produto.getId()).orElse(null);
                     if (existente != null) {
@@ -83,7 +83,7 @@ public class ProdutoController {
                                    @ModelAttribute Produto produto,
                                    @RequestParam("imagemFile") MultipartFile imagemFile) {
         try {
-            // Se o usuário enviou uma nova imagem
+            
             if (imagemFile != null && !imagemFile.isEmpty()) {
                 String pastaUploads = "src/main/resources/static/uploads/";
                 Path caminhoPasta = Paths.get(pastaUploads);
@@ -98,7 +98,7 @@ public class ProdutoController {
 
                 produto.setImagemUrl("/uploads/" + nomeArquivo);
             } else {
-                // Preserva imagem existente
+                
                 Produto existente = produtoService.buscarPorId(id).orElseThrow();
                 produto.setImagemUrl(existente.getImagemUrl());
             }
