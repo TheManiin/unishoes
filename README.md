@@ -17,9 +17,9 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 
 # Integrantes
 
-| Felipe Ferreira de Medeiros | 3025105234 | CRUD + Beckend /n
+| Felipe Ferreira de Medeiros | 3025105234 | CRUD + Beckend <br>
 | Igor Almeida Gimenez | 3024202417 | Frontend + API
-| Ricardo Souza Niemoi Dias | 3024106458 | Segurança + Swagger \n
+| Ricardo Souza Niemoi Dias | 3024106458 | Segurança + Swagger
 
 ## Tecnologias Utilizadas
 
