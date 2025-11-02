@@ -145,7 +145,7 @@ spring.jpa.hibernate.ddl-auto=update <br>
 spring.jpa.show-sql=true <br>
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect <br>
 
-- 'Observações'
+- `Observações`
 
 Caso queira usar outra porta, altere o número 3307 no comando e no application.properties.
 
@@ -166,13 +166,13 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html#/ <br>
 
 # Usuários de Teste
 
-'Login conta Admin no Sistema Unishoes'
+`Login conta Admin no Sistema Unishoes`
 
 Nome: Admin Unishoes <br>
 Email: admin@unishoes.com <br>
 Senha: admin <br>
 
-'Login conta usuário no Sistema Unishoes'
+`Login conta usuário no Sistema Unishoes`
 
 Nome: Usuario Unishoes <br>
 Email: usuarioteste@unishoes.com <br>
