@@ -6,20 +6,18 @@
 
 # Visão Geral
 
-O UniShoes é uma aplicação web completa desenvolvida em Java 17 com Spring Boot, Thymeleaf e MySQL, voltada ao gerenciamento de uma loja de calçados.
-O sistema oferece funcionalidades de cadastro, edição, listagem, exclusão e busca de produtos e categorias, possuindo relacionamentos 1:N entre entidades.
-Inclui autenticação e controle de acesso por perfis (USER e ADMIN), além de um upload simples de imagem vinculado aos produtos.
-A camada de serviço utiliza DTOs e validação de dados, garantindo consistência no domínio.
-A aplicação também expõe uma API REST documentada com Swagger UI (/swagger-ui/index.html#/), permitindo fácil integração e testes dos endpoints.
-Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e oferece uma interface web intuitiva para o usuário.
-
----
+O UniShoes é uma aplicação web completa desenvolvida em Java 17 com Spring Boot, Thymeleaf e MySQL, voltada ao gerenciamento de uma loja de calçados. <br>
+O sistema oferece funcionalidades de cadastro, edição, listagem, exclusão e busca de produtos e categorias, possuindo relacionamentos 1:N entre entidades. <br>
+Inclui autenticação e controle de acesso por perfis (USER e ADMIN), além de um upload simples de imagem vinculado aos produtos. <br>
+A camada de serviço utiliza DTOs e validação de dados, garantindo consistência no domínio. <br>
+A aplicação também expõe uma API REST documentada com Swagger UI (/swagger-ui/index.html#/), permitindo fácil integração e testes dos endpoints. <br>
+Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e oferece uma interface web intuitiva para o usuário. <br>
 
 # Integrantes
 
 | Felipe Ferreira de Medeiros | 3025105234 | CRUD + Beckend <br>
-| Igor Almeida Gimenez | 3024202417 | Frontend + API
-| Ricardo Souza Niemoi Dias | 3024106458 | Segurança + Swagger
+| Igor Almeida Gimenez | 3024202417 | Frontend + API <br>
+| Ricardo Souza Niemoi Dias | 3024106458 | Segurança + Swagger <br>
 
 ## Tecnologias Utilizadas
 
@@ -63,12 +61,12 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 
 # Funcionalidades principais
 
-| Login e controle de acesso | Usuário e administrador com permissões distintas |
-| CRUD de produtos | Criar, listar, editar e excluir produtos |
-| CRUD de categorias | Gerenciar categorias com aviso de vínculo |
-| Upload de imagem | Upload e exibição de imagens no card do produto |
-| Validação visual | Alertas e mensagens com Bootstrap |
-| Documentação | Swagger UI acessível em `/swagger-ui/index.html#/` |
+| Login e controle de acesso | Usuário e administrador com permissões distintas | <br>
+| CRUD de produtos | Criar, listar, editar e excluir produtos | <br>
+| CRUD de categorias | Gerenciar categorias com aviso de vínculo | <br>
+| Upload de imagem | Upload e exibição de imagens no card do produto | <br>
+| Validação visual | Alertas e mensagens com Bootstrap | <br>
+| Documentação | Swagger UI acessível em `/swagger-ui/index.html#/` | <br>
 
 
 # Como Executar o Projeto Localmente
@@ -84,17 +82,17 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 
 # Passos para executar
 
-1. Clonar o repositório
-git clone https://github.com/TheManiin/unishoes.git
+1. Clonar o repositório <br>
+git clone https://github.com/TheManiin/unishoes.git <br>
 
-2. Configurar o banco de dados
+2. Configurar o banco de dados <br>
 
-O projeto utiliza o MySQL 8.0+ como banco de dados principal.
+O projeto utiliza o MySQL 8.0+ como banco de dados principal. <br>
 Um script SQL completo está incluído no repositório, permitindo restaurar toda a base com estrutura e dados iniciais (usuários, papéis, produtos e categorias).
 
-Arquivo do banco
+Arquivo do banco 
 
-O arquivo está localizado em:
+O arquivo está localizado em: 
 
 src/main/resources/db/unishoes.sql
 
@@ -124,17 +122,17 @@ Verificando a importação
 
 Abra o MySQL Workbench ou o terminal e execute:
 
-SHOW DATABASES;
-USE marketplace_db;
-SHOW TABLES;
+SHOW DATABASES; <br>
+USE marketplace_db; <br>
+SHOW TABLES; <br>
 
 Você deve ver as tabelas:
 
-categorias
-papeis
-produtos
-usuario
-usuario_papel
+categorias <br>
+papeis <br>
+produtos <br>
+usuario <br>
+usuario_papel <br>
 
 Configuração no application.properties
 
@@ -142,13 +140,13 @@ O arquivo deve conter:
 
 spring.application.name=unishoes
 
-spring.datasource.url=jdbc:mysql://localhost:3307/marketplace_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=admin
+spring.datasource.url=jdbc:mysql://localhost:3307/marketplace_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC <br>
+spring.datasource.username=root <br>
+spring.datasource.password=admin <br>
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update <br>
+spring.jpa.show-sql=true <br>
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect <br>
 
 Observações
 
@@ -164,57 +162,59 @@ mvn spring-boot:run
 
 4. Acessar no navegador
 
-Pagina de Apresentação (index): http://localhost:8080/ 
-Sistema Web: http://localhost:8080/app/produtos
-Login: http://localhost:8080/login
-Swagger UI: http://localhost:8080/swagger-ui/index.html#/
+Pagina de Apresentação (index): http://localhost:8080/ <br>
+Sistema Web: http://localhost:8080/app/produtos <br>
+Login: http://localhost:8080/login <br>
+Swagger UI: http://localhost:8080/swagger-ui/index.html#/ <br>
 
 # Usuários de Teste
 
 # Login conta Admin no Sistema Unishoes
-Nome: Admin Unishoes
-Email: admin@unishoes.com
-Senha: admin
+
+Nome: Admin Unishoes <br>
+Email: admin@unishoes.com <br>
+Senha: admin <br>
 
 # Login conta usuário no Sistema Unishoes
-Nome: Usuario Unishoes
-Email: usuarioteste@unishoes.com
-Senha: usuario1
+
+Nome: Usuario Unishoes <br>
+Email: usuarioteste@unishoes.com <br>
+Senha: usuario1 <br>
 
 # API REST (Swagger)
 
-A API está documentada com Springdoc OpenAPI.
-http://localhost:8080/swagger-ui/index.html#/
+A API está documentada com Springdoc OpenAPI. <br>
+http://localhost:8080/swagger-ui/index.html#/ <br>
 
 Endpoints principais:
-Método
-	Endpoint
-	Descrição
-	GET
-	/api/produtos
-	Lista produtos (paginação/filtro)
-	POST
-	/api/produtos
-	Cria novo produto
-	PUT
-	/api/produtos/{id}
-	Atualiza produto
-	DELETE
-	/api/produtos/{id}
-	Remove produto
-	GET
-	/api/categorias
-	Lista categorias
-	POST
-	/api/categorias
-	Cria categoria
+Método <br>
+	Endpoint <br>
+	Descrição <br>
+	GET <br>
+	/api/produtos <br>
+	Lista produtos (paginação/filtro) <br>
+	POST <br>
+	/api/produtos <br>
+	Cria novo produto <br>
+	PUT <br>
+	/api/produtos/{id} <br>
+	Atualiza produto <br>
+	DELETE <br>
+	/api/produtos/{id} <br>
+	Remove produto <br>
+	GET <br>
+	/api/categorias <br>
+	Lista categorias <br>
+	POST <br>
+	/api/categorias <br>
+	Cria categoria <br>
 
 
 # Repositório e Links
-Pagina de Apresentação (index): http://localhost:8080/ 
-GitHub: https://github.com/TheManiin/unishoes
-YouTube: [link do vídeo de demonstração]
-Swagger: http://localhost:8080/swagger-ui/index.html#/
+Pagina de Apresentação (index): http://localhost:8080/ <br>
+GitHub: https://github.com/TheManiin/unishoes <br>
+YouTube: [link do vídeo de demonstração] <br>
+Swagger: http://localhost:8080/swagger-ui/index.html#/ <br>
 
 
 # Autores
