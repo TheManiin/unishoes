@@ -68,7 +68,6 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 | Validação visual | Alertas e mensagens com Bootstrap | <br>
 | Documentação | Swagger UI acessível em `/swagger-ui/index.html#/` | <br>
 
-
 # Como Executar o Projeto Localmente
 
 # Pré-requisitos
@@ -77,8 +76,6 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 - Maven 3.8+
 - MySQL Server rodando localmente (porta padrão '3306'/'3307') / (Utilizei a porta 3307, caso deseja utilizar outra, alterar o número da porta no arquivo: application.properties)
 - Git instalado
-
----
 
 # Passos para executar
 
