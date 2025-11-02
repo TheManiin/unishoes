@@ -1,8 +1,8 @@
 # UniShoes — Loja de Calçados Online
 
-Ano: 2025  
-Curso: Sistemas de Informação
-Turma: Turma: 49 / Vila Prudente - Noturno
+- Curso: Sistemas de Informação
+- Ano: 2025
+- Turma: Turma: 49 / Vila Prudente - Noturno
 
 # Visão Geral
 
