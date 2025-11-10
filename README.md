@@ -210,7 +210,7 @@ Método <br>
 # Repositório e Links
 Pagina de Apresentação (index): http://localhost:8080/ <br>
 GitHub: https://github.com/TheManiin/unishoes <br>
-YouTube: [link do vídeo de demonstração] <br>
+YouTube: https://www.youtube.com/watch?v=4QeEojNIuu4 <br>
 Swagger: http://localhost:8080/swagger-ui/index.html#/ <br>
 
 
