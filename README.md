@@ -16,8 +16,6 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 # Integrantes
 
 | Felipe Ferreira de Medeiros | 3025105234 | CRUD + Beckend <br>
-| Igor Almeida Gimenez | 3024202417 | Frontend + API <br>
-| Ricardo Souza Niemoi Dias | 3024106458 | Segurança + Swagger <br>
 
 ## Tecnologias Utilizadas
 
@@ -215,4 +213,4 @@ Swagger: http://localhost:8080/swagger-ui/index.html#/ <br>
 
 
 # Autores
-Projeto desenvolvido por Felipe Ferreira de Medeiros, Igor Almeida Gimenez e Ricardo Souza Niemoi Dias, como parte da disciplina de Desenvolvimento Web com Spring Boot.
+Projeto desenvolvido por Felipe Ferreira de Medeiros, como parte da disciplina de Desenvolvimento Web com Spring Boot.
