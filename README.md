@@ -15,7 +15,7 @@ Com arquitetura em camadas, o projeto segue boas práticas de desenvolvimento e 
 
 # Integrantes
 
-| Felipe Ferreira de Medeiros | 3025105234 | CRUD + Beckend <br>
+| Felipe Ferreira de Medeiros | 3025105234 | CRUD + Beckend + Front <br>
 
 ## Tecnologias Utilizadas
 
